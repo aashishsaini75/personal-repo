@@ -34,6 +34,7 @@
 		0FA105D52438CF0E000CB8D4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA105D42438CF0E000CB8D4 /* NewsViewController.swift */; };
 		0FBFB3752440B76B00AB8363 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBFB3742440B76A00AB8363 /* UserDefaultsKeys.swift */; };
 		0FBFB37B2440C51F00AB8363 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBFB37A2440C51F00AB8363 /* Default-568h@2x.png */; };
+		0FBFB37D24419F8D00AB8363 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBFB37C24419F8D00AB8363 /* ReviewService.swift */; };
 		0FD36C9124361AA600BC46C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0332FB2435C82200A54AC1 /* Main.storyboard */; };
 		0FD36C9224361AA700BC46C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0332FB2435C82200A54AC1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		0FB6156A243B94FF008982B3 /* NH Guard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NH Guard.entitlements"; sourceTree = "<group>"; };
 		0FBFB3742440B76A00AB8363 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDefaultsKeys.swift; path = "NH Guard/UserDefaultsKeys.swift"; sourceTree = SOURCE_ROOT; };
 		0FBFB37A2440C51F00AB8363 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0FBFB37C24419F8D00AB8363 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		0FCAA8C824362D4700023BC3 /* RedHatDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				0F0332FE2435C82500A54AC1 /* Assets.xcassets */,
 				0F0333002435C82500A54AC1 /* LaunchScreen.storyboard */,
 				0F0333032435C82500A54AC1 /* Info.plist */,
+				0FBFB37C24419F8D00AB8363 /* ReviewService.swift */,
 			);
 			path = "NH Guard";
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F0332FA2435C82200A54AC1 /* ViewController.swift in Sources */,
+				0FBFB37D24419F8D00AB8363 /* ReviewService.swift in Sources */,
 				0F8975062438F4070073E027 /* ContactViewController.swift in Sources */,
 				0F89750E24399DBB0073E027 /* VeterenViewController.swift in Sources */,
 				0F89750C243994460073E027 /* JoinViewController.swift in Sources */,
@@ -466,14 +470,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -521,13 +525,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -541,11 +545,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4UK7VR689S;
 				INFOPLIST_FILE = "NH Guard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkcircletechllcapps.nh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -563,11 +568,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4UK7VR689S;
 				INFOPLIST_FILE = "NH Guard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkcircletechllcapps.nh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

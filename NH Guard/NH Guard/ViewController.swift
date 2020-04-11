@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import StoreKit
 
 class HomeViewController: UIViewController {
 
@@ -69,7 +68,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // If the count has not yet been stored, this will return 0
+        if #available(iOS 10.3, *) {
+        ReviewService().showReviewView(afterMinimumLaunchCount: 10)
+        }
+        else{
+            // Review View is unvailable for lower versions. Please use your custom view.
+        }
         
         self.FBUIview_corner.layer.cornerRadius = 25
         self.twUIview_corner.layer.cornerRadius = 25
