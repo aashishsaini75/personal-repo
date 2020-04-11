@@ -32,7 +32,8 @@
      
      func showReviewView(afterMinimumLaunchCount:Int){
          if(self.isReviewViewToBeDisplayed(minimumLaunchCount: afterMinimumLaunchCount)){
-             SKStoreReviewController.requestReview()
+            SKStoreReviewController.requestReview()
+            
          }
      }
  }
