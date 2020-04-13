@@ -15,10 +15,13 @@ for i in cat:
 a=0
 for j in links:
     driver.get(j)
-    if "Server Error (500)" in driver.page_source:
+    if  "ValueError" in driver.page_source:
         print("Error in "+j)
     else:
-        pass
+        if "Server Error (500)" in driver.page_source:
+            print("Error in " + j)
+        else:
+            pass
     a= a+1
     print(a)
 driver.quit()
