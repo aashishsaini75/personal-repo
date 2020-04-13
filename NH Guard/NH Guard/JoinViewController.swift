@@ -12,6 +12,7 @@ import WebKit
 class JoinViewController: UIViewController ,WKNavigationDelegate{
     
     @IBOutlet var myWebView: WKWebView!
+    @IBOutlet var loading: UILabel!
     
     @IBOutlet var activityind: UIActivityIndicatorView!
     @IBOutlet var joinbackbutton: UIImageView!
@@ -23,6 +24,7 @@ class JoinViewController: UIViewController ,WKNavigationDelegate{
         myWebView.addSubview(self.activityind)
         self.myWebView.navigationDelegate = self
         activityind.startAnimating()
+        loading.isHidden = false
         activityind.hidesWhenStopped = true
 
 
@@ -36,10 +38,17 @@ class JoinViewController: UIViewController ,WKNavigationDelegate{
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+                  loading.isHidden = true
+
                   activityind.stopAnimating()
+        
+        
+        
               }
        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
                   activityind.stopAnimating()
+                  loading.isHidden = true
+
               }
             
         @objc func imageTapped4(gesture: UIGestureRecognizer) {

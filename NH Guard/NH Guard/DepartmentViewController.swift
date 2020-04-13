@@ -15,6 +15,7 @@ class DepartmentViewController: UIViewController ,WKNavigationDelegate{
     
     @IBOutlet var departmentbackbutton: UIImageView!
     
+    @IBOutlet var loading: UILabel!
     
     @IBOutlet var activityind: UIActivityIndicatorView!
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class DepartmentViewController: UIViewController ,WKNavigationDelegate{
         myWebView.addSubview(self.activityind)
         self.myWebView.navigationDelegate = self
         activityind.startAnimating()
+        loading.isHidden = false
         activityind.hidesWhenStopped = true
         
         let tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(imageTapped4))
@@ -36,10 +38,14 @@ class DepartmentViewController: UIViewController ,WKNavigationDelegate{
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
+
                   activityind.stopAnimating()
               }
        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
                   activityind.stopAnimating()
+            loading.isHidden = true
+
               }
             
         @objc func imageTapped4(gesture: UIGestureRecognizer) {

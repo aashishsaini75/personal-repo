@@ -1,11 +1,11 @@
 from selenium import webdriver
 prod_url = "https://bestviewsreviews.com/all/"
 chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--headless')
 chrome_options.add_argument("--incognito")
 dev_url = "https://dev2.bestviewsreviews.com/all/"
 driver = webdriver.Chrome(executable_path="../drivers/chromedriver",chrome_options=chrome_options)
-driver.get(prod_url)
+driver.get(dev_url)
 driver.maximize_window()
 links = []
 cat = driver.find_element_by_xpath("//*[@class = 'four-division all_categories_footer']").find_elements_by_xpath("//ul[@style ='display: flex;']")
