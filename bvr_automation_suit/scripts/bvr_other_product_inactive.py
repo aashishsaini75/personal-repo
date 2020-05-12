@@ -13,10 +13,8 @@ prod_update_url = "https://bestviewsreviews.com/api/product/"
 dev_update_url = "https://dev1.bestviewsreviews.com/api/product/"
 dev_url = "https://dev1.bestviewsreviews.com/all/"
 prod_url = "https://bestviewsreviews.com/all/"
-
 chrome_options = webdriver.ChromeOptions()
-
-chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--headless')
 chrome_options.add_argument("--incognito")
 driver = webdriver.Chrome(executable_path="../drivers/chromedriver",chrome_options=chrome_options)
 driver.get(prod_url)
@@ -45,55 +43,58 @@ for j in cat_links:
         driver.switch_to.window(driver.window_handles[1])
         asin_code = str(driver.current_url).split("/")[-2]
         if "The requested resource was not found on this server." in driver.page_source:
-            now = datetime.now()
-            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-            # create the section
-            myMessageSection = pymsteams.cardsection()
-            # Section Title
-            myMessageSection.title(" 📢 NOTICE ⚠️")
-            # Activity Elements
-            myMessageSection.activityTitle("Affiliate data missing ")
-            myMessageSection.activityText("The following category's product affiliate URL is missing ")
-            # Facts are key value pairs displayed in a list.
-            myMessageSection.addFact("Category: ", cat_name)
-            myMessageSection.addFact("Product title", title)
-            myMessageSection.addFact("Product URL", product_url)
-            myMessageSection.addFact("Date & Time", dt_string)
-            # Section Text
-            myMessageSection.text("Product Details")
-            # Section Images
-            myTeamsMessage.summary("summary")
-            # Add your section to the connector card object before sending
-            myTeamsMessage.addSection(myMessageSection)
-            myTeamsMessage.send()
+            # now = datetime.now()
+            # dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            # # create the section
+            # myMessageSection = pymsteams.cardsection()
+            # # Section Title
+            # myMessageSection.title(" 📢 NOTICE ⚠️")
+            # # Activity Elements
+            # myMessageSection.activityTitle("Affiliate data missing ")
+            # myMessageSection.activityText("The following category's product affiliate URL is missing ")
+            # # Facts are key value pairs displayed in a list.
+            # myMessageSection.addFact("Category: ", cat_name)
+            # myMessageSection.addFact("Product title", title)
+            # myMessageSection.addFact("Product URL", product_url)
+            # myMessageSection.addFact("Date & Time", dt_string)
+            # # Section Text
+            # myMessageSection.text("Product Details")
+            # # Section Images
+            # myTeamsMessage.summary("summary")
+            # # Add your section to the connector card object before sending
+            # myTeamsMessage.addSection(myMessageSection)
+            # myTeamsMessage.send()
+            res2 = requests.put(url=prod_update_url + asin_code + "/" + "update", data=data1,
+                                headers={'Authorization': "Token 658dd0395badb9fe407ea6a16763458a14accb87"})
+            print(str(asin_code) + " Product Updated Successfully ")
 
         elif "We don't know when or if this item will be back in stock." in driver.page_source:
-            now = datetime.now()
-            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-            # create the section
-            myMessageSection = pymsteams.cardsection()
-            # Section Title
-            myMessageSection.title("📢 INFORMATION ⚠️")
-            # Activity Elements
-            myMessageSection.activityTitle("OUT OF STOCK")
-            myMessageSection.activityText("The following category's product is out of stock at Amazon.com")
-            # Facts are key value pairs displayed in a list.
-            myMessageSection.addFact("Category: ", cat_name)
-            myMessageSection.addFact("ASIN Code: ", asin_code)
-            myMessageSection.addFact("Product title", title)
-            myMessageSection.addFact("Product URL", product_url)
-            myMessageSection.addFact("Date & Time", dt_string)
-            # Section Text
-            myMessageSection.text("Product Details")
-            # Section Images
-            myTeamsMessage.summary("summary")
-            # Add your section to the connector card object before sending
-            myTeamsMessage.addSection(myMessageSection)
-            myTeamsMessage.send()
-            res0 = requests.put(url=dev_update_url + asin_code + "/" + "update", data=data1,
-                                headers={'Authorization': "Token f099e89c7ccbe3a1a742a7a93cd1a0f2c1b30b33"})
-            res1 = requests.put(url=dpl_update_url + asin_code + "/" + "update", data=data1,
-                                headers={'Authorization': "Token 5abd3a487ad4023482ce0379faad475916263b88"})
+            # now = datetime.now()
+            # dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            # # create the section
+            # myMessageSection = pymsteams.cardsection()
+            # # Section Title
+            # myMessageSection.title("📢 INFORMATION ⚠️")
+            # # Activity Elements
+            # myMessageSection.activityTitle("OUT OF STOCK")
+            # myMessageSection.activityText("The following category's product is out of stock at Amazon.com")
+            # # Facts are key value pairs displayed in a list.
+            # myMessageSection.addFact("Category: ", cat_name)
+            # myMessageSection.addFact("ASIN Code: ", asin_code)
+            # myMessageSection.addFact("Product title", title)
+            # myMessageSection.addFact("Product URL", product_url)
+            # myMessageSection.addFact("Date & Time", dt_string)
+            # # Section Text
+            # myMessageSection.text("Product Details")
+            # # Section Images
+            # myTeamsMessage.summary("summary")
+            # # Add your section to the connector card object before sending
+            # myTeamsMessage.addSection(myMessageSection)
+            # myTeamsMessage.send()
+            # res0 = requests.put(url=dev_update_url + asin_code + "/" + "update", data=data1,
+            #                     headers={'Authorization': "Token f099e89c7ccbe3a1a742a7a93cd1a0f2c1b30b33"})
+            # res1 = requests.put(url=dpl_update_url + asin_code + "/" + "update", data=data1,
+            #                     headers={'Authorization': "Token 5abd3a487ad4023482ce0379faad475916263b88"})
             res2 = requests.put(url=prod_update_url + asin_code + "/" + "update", data=data1,
                                 headers={'Authorization': "Token 658dd0395badb9fe407ea6a16763458a14accb87"})
             print(str(asin_code) + " Product Updated Successfully ")
@@ -101,32 +102,32 @@ for j in cat_links:
             # csv_writer.writerow(data)
 
         elif "Sorry! We couldn't find that page. Try searching or go to Amazon's home page." in driver.page_source:
-            now = datetime.now()
-            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-            # create the section
-            myMessageSection = pymsteams.cardsection()
-            # Section Title
-            myMessageSection.title(" ⚠️ WARNING ⚠️")
-            # Activity Elements
-            myMessageSection.activityTitle("Product is Removed")
-            myMessageSection.activityText("The following category's product has been removed from Amazon.com")
-            # Facts are key value pairs displayed in a list.
-            myMessageSection.addFact("Category: ", cat_name)
-            myMessageSection.addFact("ASIN Code: ", asin_code)
-            myMessageSection.addFact("Product title", title)
-            myMessageSection.addFact("Product URL", product_url)
-            myMessageSection.addFact("Date & Time", dt_string)
-            # Section Text
-            myMessageSection.text("Product Details")
-            # Section Images
-            myTeamsMessage.summary("summary")
-            # Add your section to the connector card object before sending
-            myTeamsMessage.addSection(myMessageSection)
-            myTeamsMessage.send()
-            res0 = requests.put(url=dev_update_url + asin_code + "/" + "update", data=data1,
-                                headers={'Authorization': "Token f099e89c7ccbe3a1a742a7a93cd1a0f2c1b30b33"})
-            res1 = requests.put(url=dpl_update_url + asin_code + "/" + "update", data=data1,
-                                headers={'Authorization': "Token 5abd3a487ad4023482ce0379faad475916263b88"})
+            # now = datetime.now()
+            # dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            # # create the section
+            # myMessageSection = pymsteams.cardsection()
+            # # Section Title
+            # myMessageSection.title(" ⚠️ WARNING ⚠️")
+            # # Activity Elements
+            # myMessageSection.activityTitle("Product is Removed")
+            # myMessageSection.activityText("The following category's product has been removed from Amazon.com")
+            # # Facts are key value pairs displayed in a list.
+            # myMessageSection.addFact("Category: ", cat_name)
+            # myMessageSection.addFact("ASIN Code: ", asin_code)
+            # myMessageSection.addFact("Product title", title)
+            # myMessageSection.addFact("Product URL", product_url)
+            # myMessageSection.addFact("Date & Time", dt_string)
+            # # Section Text
+            # myMessageSection.text("Product Details")
+            # # Section Images
+            # myTeamsMessage.summary("summary")
+            # # Add your section to the connector card object before sending
+            # myTeamsMessage.addSection(myMessageSection)
+            # myTeamsMessage.send()
+            # res0 = requests.put(url=dev_update_url + asin_code + "/" + "update", data=data1,
+            #                     headers={'Authorization': "Token f099e89c7ccbe3a1a742a7a93cd1a0f2c1b30b33"})
+            # res1 = requests.put(url=dpl_update_url + asin_code + "/" + "update", data=data1,
+            #                     headers={'Authorization': "Token 5abd3a487ad4023482ce0379faad475916263b88"})
             res2 = requests.put(url=prod_update_url + asin_code + "/" + "update", data=data1,
                                 headers={'Authorization': "Token 658dd0395badb9fe407ea6a16763458a14accb87"})
             print(str(asin_code) + " Product Updated Successfully ")
@@ -134,32 +135,32 @@ for j in cat_links:
             # data = [asin_code, product_url, "Product is Removed"]
             # csv_writer.writerow(data)
         elif "No Product matches the given query." in driver.page_source:
-            now = datetime.now()
-            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-            # create the section
-            myMessageSection = pymsteams.cardsection()
-            # Section Title
-            myMessageSection.title(" ⚠️ WARNING ⚠️")
-            # Activity Elements
-            myMessageSection.activityTitle("No Affiliate URL ")
-            myMessageSection.activityText("The following category's product has been removed from Amazon.com")
-            # Facts are key value pairs displayed in a list.
-            myMessageSection.addFact("Category: ", cat_name)
-            myMessageSection.addFact("ASIN Code: ", asin_code)
-            myMessageSection.addFact("Product title", title)
-            myMessageSection.addFact("Product URL", product_url)
-            myMessageSection.addFact("Date & Time", dt_string)
-            # Section Text
-            myMessageSection.text("Product Details")
-            # Section Images
-            myTeamsMessage.summary("summary")
-            # Add your section to the connector card object before sending
-            myTeamsMessage.addSection(myMessageSection)
-            myTeamsMessage.send()
-            res0 = requests.put(url=dev_update_url + asin_code + "/" + "update", data=data1,
-                                headers={'Authorization': "Token f099e89c7ccbe3a1a742a7a93cd1a0f2c1b30b33"})
-            res1 = requests.put(url=dpl_update_url + asin_code + "/" + "update", data=data1,
-                                headers={'Authorization': "Token 5abd3a487ad4023482ce0379faad475916263b88"})
+            # now = datetime.now()
+            # dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            # # create the section
+            # myMessageSection = pymsteams.cardsection()
+            # # Section Title
+            # myMessageSection.title(" ⚠️ WARNING ⚠️")
+            # # Activity Elements
+            # myMessageSection.activityTitle("No Affiliate URL ")
+            # myMessageSection.activityText("The following category's product has been removed from Amazon.com")
+            # # Facts are key value pairs displayed in a list.
+            # myMessageSection.addFact("Category: ", cat_name)
+            # myMessageSection.addFact("ASIN Code: ", asin_code)
+            # myMessageSection.addFact("Product title", title)
+            # myMessageSection.addFact("Product URL", product_url)
+            # myMessageSection.addFact("Date & Time", dt_string)
+            # # Section Text
+            # myMessageSection.text("Product Details")
+            # # Section Images
+            # myTeamsMessage.summary("summary")
+            # # Add your section to the connector card object before sending
+            # myTeamsMessage.addSection(myMessageSection)
+            # myTeamsMessage.send()
+            # res0 = requests.put(url=dev_update_url + asin_code + "/" + "update", data=data1,
+            #                     headers={'Authorization': "Token f099e89c7ccbe3a1a742a7a93cd1a0f2c1b30b33"})
+            # res1 = requests.put(url=dpl_update_url + asin_code + "/" + "update", data=data1,
+            #                     headers={'Authorization': "Token 5abd3a487ad4023482ce0379faad475916263b88"})
             res2 = requests.put(url=prod_update_url + asin_code + "/" + "update", data=data1,
                                 headers={'Authorization': "Token 658dd0395badb9fe407ea6a16763458a14accb87"})
             print(str(asin_code) + " Product Updated Successfully ")

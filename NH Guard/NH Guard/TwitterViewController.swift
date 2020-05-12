@@ -14,6 +14,7 @@ class TwitterViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet var twitterbackbutton: UIImageView!
     
     
+    @IBOutlet var loading: UILabel!
     
     @IBOutlet var myWebView: WKWebView!
     @IBOutlet var activityind: UIActivityIndicatorView!
@@ -38,10 +39,13 @@ class TwitterViewController: UIViewController, WKNavigationDelegate {
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
                activityind.stopAnimating()
            }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
                activityind.stopAnimating()
+        loading.isHidden = true
+
            }
             
         @objc func imageTapped4(gesture: UIGestureRecognizer) {

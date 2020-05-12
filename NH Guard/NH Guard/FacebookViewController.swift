@@ -17,6 +17,7 @@ class FacebookViewController: UIViewController, WKNavigationDelegate{
     @IBOutlet var activityind: UIActivityIndicatorView!
     
    
+    @IBOutlet var loading: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +39,13 @@ class FacebookViewController: UIViewController, WKNavigationDelegate{
                 }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
                   activityind.stopAnimating()
               }
        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
                   activityind.stopAnimating()
+        loading.isHidden = true
+
               }
             
         @objc func imageTapped4(gesture: UIGestureRecognizer) {

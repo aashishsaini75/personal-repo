@@ -14,6 +14,7 @@ class UnitsViewController: UIViewController,WKNavigationDelegate {
     @IBOutlet var myWebView: WKWebView!
     
     @IBOutlet var unitbackbutton: UIImageView!
+    @IBOutlet var loading: UILabel!
     
     @IBOutlet var activityind:
     UIActivityIndicatorView!
@@ -36,9 +37,14 @@ class UnitsViewController: UIViewController,WKNavigationDelegate {
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
+
+        
                activityind.stopAnimating()
            }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        loading.isHidden = true
+
                activityind.stopAnimating()
            }
             

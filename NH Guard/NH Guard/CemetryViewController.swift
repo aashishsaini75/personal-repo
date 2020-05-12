@@ -17,6 +17,7 @@ class CemetryViewController: UIViewController,WKNavigationDelegate
    
     @IBOutlet var activityind: UIActivityIndicatorView!
     
+    @IBOutlet var loading: UILabel!
     @IBOutlet var cemetrybackbutton: UIImageView!
     
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class CemetryViewController: UIViewController,WKNavigationDelegate
         myWebView.addSubview(self.activityind)
         self.myWebView.navigationDelegate = self
         activityind.startAnimating()
+        loading.isHidden = false
         activityind.hidesWhenStopped = true
         
         let tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(imageTapped4))
@@ -38,9 +40,13 @@ class CemetryViewController: UIViewController,WKNavigationDelegate
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
+
                activityind.stopAnimating()
            }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        loading.isHidden = true
+
                activityind.stopAnimating()
            }
             

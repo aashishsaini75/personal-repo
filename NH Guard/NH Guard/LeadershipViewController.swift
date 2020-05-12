@@ -11,6 +11,7 @@ import WebKit
 class LeadershipViewController: UIViewController,WKNavigationDelegate {
     @IBOutlet weak var myWebView: WKWebView!
     
+    @IBOutlet var loading: UILabel!
     @IBOutlet var activityind:
     UIActivityIndicatorView!
     @IBOutlet var leaderbackbutton: UIImageView!
@@ -34,9 +35,12 @@ class LeadershipViewController: UIViewController,WKNavigationDelegate {
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
                   activityind.stopAnimating()
               }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        loading.isHidden = true
+
                   activityind.stopAnimating()
               }
             

@@ -21,6 +21,7 @@ class HistoryViewController: UIViewController,WKNavigationDelegate{
     
     @IBOutlet var historybackbutton: UIImageView!
     
+    @IBOutlet var loading: UILabel!
     @IBOutlet var myWebView: WKWebView!
     
     @IBOutlet var activityind: UIActivityIndicatorView!
@@ -44,9 +45,13 @@ class HistoryViewController: UIViewController,WKNavigationDelegate{
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
+
                activityind.stopAnimating()
            }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        loading.isHidden = true
+
                activityind.stopAnimating()
            }
             

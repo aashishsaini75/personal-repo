@@ -15,6 +15,7 @@ class CommunityViewController: UIViewController,WKNavigationDelegate {
     @IBOutlet var webView: WKWebView!
     @IBOutlet var communitybackbutton: UIImageView!
     
+    @IBOutlet var loading: UILabel!
     @IBOutlet var activityind: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,8 @@ class CommunityViewController: UIViewController,WKNavigationDelegate {
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
+
                activityind.stopAnimating()
            }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -43,6 +46,8 @@ class CommunityViewController: UIViewController,WKNavigationDelegate {
            }
             
         @objc func imageTapped4(gesture: UIGestureRecognizer) {
+            loading.isHidden = true
+
             // if the tapped view is a UIImageView then set it to imageview
         if (gesture.view as? UIImageView) != nil {
                 self.performSegue(withIdentifier: "HomeScreenSague", sender: self)

@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    let application =  UIApplication.shared
+
 
     @IBOutlet var MoreIconPressed: UIImageView!
     @IBOutlet var FBUIview_corner: UIView!
@@ -27,12 +29,37 @@ class HomeViewController: UIViewController {
         self.performSegue(withIdentifier: "joinViewSague", sender: self)
     }
     @IBAction func twitterbutton(_ sender: Any) {
-        self.performSegue(withIdentifier: "twitterViewSague", sender: self)
+        guard let twitterURL = URL(string: "twitter://user?screen_name=nhnationalguard") else {
+            return
+        }
+
+        if UIApplication.shared.canOpenURL(twitterURL) {
+            UIApplication.shared.open(twitterURL, options: [:], completionHandler: nil)
+        }
+        else  {
+            self.performSegue(withIdentifier: "twitterViewSague", sender: self)
+
+        }
+//        self.performSegue(withIdentifier: "twitterViewSague", sender: self)
         
     }
     @IBAction func facebookbutton(_ sender: Any) {
-        self.performSegue(withIdentifier: "facebookViewSague", sender: self)
-    }
+        guard let facebookURL = URL(string: "fb://page/?id=129928357073331") else {
+            return
+        }
+
+        if UIApplication.shared.canOpenURL(facebookURL) {
+            UIApplication.shared.open(facebookURL, options: [:], completionHandler: nil)
+        }
+        else  {
+            self.performSegue(withIdentifier: "facebookViewSague", sender: self)
+
+        }
+    
+        }
+
+//        self.performSegue(withIdentifier: "facebookViewSague", sender: self)
+    
     
     @IBAction func leadshipbutton(_ sender: Any) {
         self.performSegue(withIdentifier: "leadershipViewSague", sender: self)

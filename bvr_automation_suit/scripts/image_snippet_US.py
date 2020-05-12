@@ -7,9 +7,8 @@ import pickle
 from selenium import webdriver
 import platform
 import os
-from xlrd import open_workbook
-import json
 import requests
+cat_slug = input("Please input the category slug name")
 data = {}
 chromepath = ""
 if platform.system() == "Darwin":
@@ -20,12 +19,11 @@ elif  platform.system() == 'Linux':
     chromepath = os.path.abspath("drivers/chromedriver")
 chrome_options = webdriver.ChromeOptions()
 from selenium import webdriver
-default_sippet = """<a href="javascript:void(0)"><img border="0" src="https://s3-us-west-2.amazonaws.com/data.bestviewsreviews.com/CATEGORY_IMG/no-image.jpg" ></a>
-                <img src="//ir-na.amazon-adsystem.com/e/ir?t=bestviewsre00-20&l=am2&o=1&a=B07KQT4SQJ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />"""
+default_sippet = '<a target="_blank"  href="https://www.amazon.com/gp/product/B0002OKFA4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0002OKFA4&linkCode=as2&tag=bestviewsre0e-20&linkId=a2dcf944f9b84de2e19f610afa91b6c5"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B0002OKFA4&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL110_&tag=bestviewsre0e-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=bestviewsre0e-20&l=am2&o=1&a=B0002OKFA4" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />'
 dpl_update_url = "https://dpl.bestviewsreviews.com/api/product/"
 headers = {'Authorization': "Token 5abd3a487ad4023482ce0379faad475916263b88"}
-dpl_fetch_asin_code_url = "https://dpl.bestviewsreviews.com/api/product/no_snippet/US"
-# chrome_options.add_argument('--headless')
+dpl_fetch_asin_code_url = "https://dpl.bestviewsreviews.com/api/product/asin_list/"+cat_slug.strip()
+chrome_options.add_argument('--headless')
 chrome_options.add_argument("--incognito")
 chrome_options.add_argument(
     '--user-data-dir =/private/var/folders/90/9kfx9cfn0979236jmjn1py0r0000gn/T/.org.chromium.Chromium.YVtCko/Default')
@@ -53,14 +51,13 @@ def amazon_affiliate(asin):
     asin_val = asin
     filename = asin+".json"
     driver.find_element_by_xpath("//*[@type ='search']").send_keys(asin_val)
-    time.sleep(0.3)
+    time.sleep(1)
     driver.find_element_by_xpath("//*[@type='submit']").click()
     time.sleep(2)
     # data.update(asin_val)
     while 'No results found' in driver.page_source:
         driver.find_element_by_xpath("//*[@placeholder='keyword or ASIN/ISBN']").clear()
         time.sleep(0.3)
-        #Add default image snippet
         data1 = {"large_image_snippet":default_sippet,
                 "medium_image_snippet":default_sippet,
                     "small_image_snippet":default_sippet}
@@ -71,7 +68,10 @@ def amazon_affiliate(asin):
     WebDriverWait(driver, 20).until(
         EC.visibility_of_element_located((By.XPATH, "//*[@title='Build links and widgets for this product']")))
     c = driver.find_elements_by_xpath("//*[@title='Build links and widgets for this product']")
-    c[1].click()
+    try:
+        c[1].click()
+    except:
+        driver.execute_script("arguments[0].click()", c[1])
     driver.find_element_by_xpath("//a[@title='Image Only']").click()
     time.sleep(0.3)
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
@@ -87,10 +87,10 @@ def amazon_affiliate(asin):
     small = ""
     for j in image_el:
         j.find_element_by_id("dropdown1_"+str(a)).click()
-        time.sleep(0.5)
+        time.sleep(1)
         driver.execute_script("arguments[0].click();",
                                 driver.find_element_by_id("ac-productlinks-ad-code-panel-image-button-announce"))
-        time.sleep(0.3)
+        time.sleep(1)
         if a==0:
             large = clipboard.paste()
         elif a==1:
@@ -100,39 +100,32 @@ def amazon_affiliate(asin):
         a = a+1
         driver.find_elements_by_xpath("//*[@data-action = 'a-dropdown-button']")[2].click()
         time.sleep(1)
-    # product_detail = {
-    #     "asin": str(asin_val),
-    #     "url": str(url),
-    #     "large":str(large),
-    #     "medium":str(medium),
-    #     "small":str(small)
-    # }
-    data1 = {"large_image_snippet":large,
-            "medium_image_snippet":medium,
-                "small_image_snippet":small}
+    final_large =("https:"+large.split("<")[2].replace('img border="0" src="',"").replace('"',"").replace(">",""))
+    final_medium=("https:"+medium.split("<")[2].replace('img border="0" src="',"").replace('"',"").replace(">",""))
+    final_small=("https:"+small.split("<")[2].replace('img border="0" src="',"").replace('"',"").replace(">",""))
+
+    data1 = {"large_image_snippet":final_large,
+            "medium_image_snippet":final_medium,
+                "small_image_snippet":final_small}
+
     requests.put(url=dpl_update_url + asin_val + "/" + "update", data=data1,
                     headers=headers)
-    # data.update(product_detail)
-    # with open("/Users/aashishsaini/PycharmProjects/bvr_automation_suit/json/"+filename, 'w') as json_file:
-    #     json.dump(data, json_file,indent=4)
     print("Done for "+asin_val)
     driver.find_element_by_xpath("//a[@title = 'Home']").click()
+
+
 # except:
 #     return
 
 
-process_flag = True
-if str(requests.get(dpl_fetch_asin_code_url, headers=headers).json()["asin"]) is not "":
-    while str(requests.get(dpl_fetch_asin_code_url, headers=headers).json()["asin"]) is not "":
-        try:
-            asin_code = requests.get(dpl_fetch_asin_code_url, headers=headers).json()["asin"]
-            print(asin_code)
-            amazon_affiliate(asin_code)
-        except:
-            print("There is some error ...")
-            process_flag = False
-else:
-    print("All products has been already updated, No new or pending product found to update image snippet data")
-    driver.quit()
+# try:
+asin_code = requests.get(dpl_fetch_asin_code_url, headers=headers).json()
+for i in asin_code:
+        # print(i)
+    amazon_affiliate(i)
+# except:
+#     print("There is some error ...")
+
+
 
 driver.quit()

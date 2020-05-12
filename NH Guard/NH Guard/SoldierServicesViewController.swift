@@ -16,6 +16,7 @@ class SoldierServicesViewController: UIViewController,WKNavigationDelegate {
     
     @IBOutlet var activityind: UIActivityIndicatorView!
     
+    @IBOutlet var loading: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         let myURL = URL(string:"https://nh.ng.mil/Soldier-Services/")
@@ -35,9 +36,12 @@ class SoldierServicesViewController: UIViewController,WKNavigationDelegate {
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loading.isHidden = true
                activityind.stopAnimating()
            }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        loading.isHidden = true
+
                activityind.stopAnimating()
            }
             
