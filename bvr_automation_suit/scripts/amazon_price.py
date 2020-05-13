@@ -21,6 +21,7 @@ chrome_options = webdriver.ChromeOptions()
 from selenium import webdriver
 base_url = "https://www.amazon.com/gp/product/"
 get_api_url ="https://bestviewsreviews.com/api/product/"+cat_slug.strip()+"/no_price"
+update_api_url = "https://bestviewsreviews.com/api/product/B01BUYJX6G/"+cat_slug.strip()+"/update"
 headers={'Authorization': "Token 658dd0395badb9fe407ea6a16763458a14accb87"}
 driver = webdriver.Chrome(executable_path=chromepath)
 chrome_options.add_argument("window-size=1920x1080")
@@ -28,3 +29,13 @@ asin_code = requests.get(get_api_url, headers=headers).json()['asin_list']
 print(asin_code)
 for i in asin_code:
     driver.get(base_url+str(i))
+    try:
+        price = driver.find_element_by_xpath("//span[@id ='priceblock_ourprice']").text
+        # print(price)
+        data1={'price':price
+        }
+        requests.put(url=update_api_url, data=data1,
+                     headers=headers)
+        print("done for "+i)
+    except:
+        pass

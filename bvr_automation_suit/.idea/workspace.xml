@@ -2,24 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aad1bf54-2be9-4c7f-b5da-e92655a6935c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device.xcodeproj/project.xcworkspace/xcuserdata/aashishsaini.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device.xcodeproj/xcuserdata/aashishsaini.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device/AppDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device/Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device/Base.lproj/Main.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device/SceneDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet Device/ViewController.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet DeviceTests/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet DeviceTests/Internet_DeviceTests.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet DeviceUITests/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Internet Device/Internet DeviceUITests/Internet_DeviceUITests.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/amazon_price.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../k&amp;k/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../k&amp;k/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../k&amp;k/.idea/modules.xml" afterDir="false" />
@@ -10139,33 +10121,8 @@
       <change afterPath="$PROJECT_DIR$/../k&amp;k/web_drivers/operadriver_mac64/operadriver" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../k&amp;k/web_drivers/operadriver_mac64/sha512_sum" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../k&amp;k/web_drivers/test3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard.xcodeproj/project.xcworkspace/xcuserdata/aashishsaini.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard.xcodeproj/project.xcworkspace/xcuserdata/aashishsaini.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard.xcodeproj/xcuserdata/aashishsaini.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard.xcodeproj/xcuserdata/aashishsaini.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/Assets.xcassets/AppIcon.appiconset/1024.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/Assets.xcassets/AppIcon.appiconset/1024.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/CemetryViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/CemetryViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/CommunityViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/CommunityViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/ContactViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/ContactViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/FacebookViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/FacebookViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/HistoryViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/HistoryViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/LeadershipViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/LeadershipViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/MissionViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/MissionViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/NewsViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/NewsViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/SoldierServicesViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/SoldierServicesViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/TwitterViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/TwitterViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/UnitsViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/UnitsViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NH Guard/NH Guard/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../NH Guard/NH Guard/ViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/bvr_other_product_inactive.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/bvr_other_product_inactive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/bvr_product_active.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/bvr_product_active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/cat_500_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cat_500_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/cookies.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/cookies.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/image_snippet_US.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/image_snippet_US.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/open.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/amazon_price.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/amazon_price.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10378,7 +10335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586774038884</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated">
+      <created>1589305841639</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589305841639</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -10434,12 +10398,12 @@
     </state>
     <state x="165" y="23" width="984" height="743" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1589305760194" />
     <state x="165" y="23" width="984" height="721" key="CommitChangelistDialog2/0.23.1280.721@0.23.1280.721" timestamp="1587111248677" />
-    <state width="1259" height="266" key="GridCell.Tab.0.bottom" timestamp="1589305651655">
+    <state width="1259" height="266" key="GridCell.Tab.0.bottom" timestamp="1589306999003">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1259" height="237" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.-106.1920.1080@0.0.1280.800" timestamp="1582079486151" />
     <state width="1899" height="237" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582102522307" />
-    <state width="1259" height="266" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1589305651655" />
+    <state width="1259" height="266" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1589306999003" />
     <state width="1899" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1582004818536" />
     <state width="1899" height="237" key="GridCell.Tab.0.bottom/0.23.1280.722/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582090600965" />
     <state width="1259" height="237" key="GridCell.Tab.0.bottom/0.23.1280.722@0.23.1280.722" timestamp="1584363095706" />
@@ -10447,12 +10411,12 @@
     <state width="1899" height="237" key="GridCell.Tab.0.bottom/0.23.1280.726/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582093499697" />
     <state width="1259" height="203" key="GridCell.Tab.0.bottom/0.23.1280.728/1280.-83.1920.1057@0.23.1280.728" timestamp="1581648798069" />
     <state width="1899" height="237" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582093561332" />
-    <state width="1259" height="266" key="GridCell.Tab.0.center" timestamp="1589305651653">
+    <state width="1259" height="266" key="GridCell.Tab.0.center" timestamp="1589306999001">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1259" height="237" key="GridCell.Tab.0.center/0.0.1280.800/1280.-106.1920.1080@0.0.1280.800" timestamp="1582079486148" />
     <state width="1899" height="237" key="GridCell.Tab.0.center/0.0.1280.800/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582102522304" />
-    <state width="1259" height="266" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1589305651653" />
+    <state width="1259" height="266" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1589306999001" />
     <state width="1899" height="237" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1582004818534" />
     <state width="1899" height="237" key="GridCell.Tab.0.center/0.23.1280.722/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582090600962" />
     <state width="1259" height="237" key="GridCell.Tab.0.center/0.23.1280.722@0.23.1280.722" timestamp="1584363095705" />
@@ -10460,13 +10424,13 @@
     <state width="1899" height="237" key="GridCell.Tab.0.center/0.23.1280.726/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582093499695" />
     <state width="1259" height="203" key="GridCell.Tab.0.center/0.23.1280.728/1280.-83.1920.1057@0.23.1280.728" timestamp="1581648798068" />
     <state width="1899" height="237" key="GridCell.Tab.0.center/0.23.1280.777/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582093561329" />
-    <state width="1259" height="266" key="GridCell.Tab.0.left" timestamp="1589305651651">
+    <state width="1259" height="266" key="GridCell.Tab.0.left" timestamp="1589306999000">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1899" height="237" key="GridCell.Tab.0.left/0.0.1280.745@0.0.1280.800" timestamp="1582012864486" />
     <state width="1259" height="237" key="GridCell.Tab.0.left/0.0.1280.800/1280.-106.1920.1080@0.0.1280.800" timestamp="1582079486147" />
     <state width="1899" height="237" key="GridCell.Tab.0.left/0.0.1280.800/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582102522302" />
-    <state width="1259" height="266" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1589305651651" />
+    <state width="1259" height="266" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1589306999000" />
     <state width="1899" height="237" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1582004818534" />
     <state width="1899" height="237" key="GridCell.Tab.0.left/0.23.1280.722/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582090600961" />
     <state width="1259" height="237" key="GridCell.Tab.0.left/0.23.1280.722@0.23.1280.722" timestamp="1584363095704" />
@@ -10474,12 +10438,12 @@
     <state width="1899" height="237" key="GridCell.Tab.0.left/0.23.1280.726/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582093499694" />
     <state width="1259" height="203" key="GridCell.Tab.0.left/0.23.1280.728/1280.-83.1920.1057@0.23.1280.728" timestamp="1581648798068" />
     <state width="1899" height="237" key="GridCell.Tab.0.left/0.23.1280.777/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582093561328" />
-    <state width="1259" height="266" key="GridCell.Tab.0.right" timestamp="1589305651654">
+    <state width="1259" height="266" key="GridCell.Tab.0.right" timestamp="1589306999002">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1259" height="237" key="GridCell.Tab.0.right/0.0.1280.800/1280.-106.1920.1080@0.0.1280.800" timestamp="1582079486149" />
     <state width="1899" height="237" key="GridCell.Tab.0.right/0.0.1280.800/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582102522306" />
-    <state width="1259" height="266" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1589305651654" />
+    <state width="1259" height="266" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1589306999002" />
     <state width="1899" height="237" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1582004818535" />
     <state width="1899" height="237" key="GridCell.Tab.0.right/0.23.1280.722/1280.-106.1920.1080@1280.-106.1920.1080" timestamp="1582090600963" />
     <state width="1259" height="237" key="GridCell.Tab.0.right/0.23.1280.722@0.23.1280.722" timestamp="1584363095705" />
