@@ -482,13 +482,14 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="335" y="14" key="#image_snippet_US_(1)/0.0.1280.800@0.0.1280.800" timestamp="1581904892242" />
-    <state x="186" y="23" width="984" height="722" key="CommitChangelistDialog2" timestamp="1589531772589">
-      <screen x="0" y="23" width="1280" height="722" />
+    <state x="186" y="23" width="984" height="722" key="CommitChangelistDialog2" timestamp="1589531924510">
+      <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="165" y="23" width="984" height="743" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1589305760194" />
     <state x="165" y="44" key="CommitChangelistDialog2/0.23.1280.720@0.23.1280.720" timestamp="1589523371149" />
     <state x="165" y="23" width="984" height="721" key="CommitChangelistDialog2/0.23.1280.721@0.23.1280.721" timestamp="1587111248677" />
-    <state x="186" y="23" width="984" height="722" key="CommitChangelistDialog2/0.23.1280.722@0.23.1280.722" timestamp="1589531772589" />
+    <state x="186" y="23" width="984" height="722" key="CommitChangelistDialog2/0.23.1280.722@0.23.1280.722" timestamp="1589531840900" />
+    <state x="186" y="23" key="CommitChangelistDialog2/0.23.1280.724@0.23.1280.724" timestamp="1589531924510" />
     <state width="1259" height="223" key="GridCell.Tab.0.bottom" timestamp="1589527369533">
       <screen x="0" y="23" width="1280" height="720" />
     </state>
@@ -570,10 +571,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1259" height="263" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1583210909481" />
-    <state x="274" y="129" key="RollbackChangesDialog" timestamp="1589305695938">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="274" y="139" key="RollbackChangesDialog" timestamp="1589531860119">
+      <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state x="274" y="129" key="RollbackChangesDialog/0.0.1280.800@0.0.1280.800" timestamp="1589305695938" />
+    <state x="274" y="139" key="RollbackChangesDialog/0.23.1280.722@0.23.1280.722" timestamp="1589531860119" />
     <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1586774043190">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
