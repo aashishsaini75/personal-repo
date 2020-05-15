@@ -8,6 +8,8 @@ from selenium import webdriver
 import platform
 import os
 import requests
+from selenium.webdriver.common.keys import Keys
+
 cat_slug = input("Please input the category slug name")
 data = {}
 chromepath = ""
@@ -27,15 +29,69 @@ driver = webdriver.Chrome(executable_path=chromepath)
 chrome_options.add_argument("window-size=1920x1080")
 asin_code = requests.get(get_api_url, headers=headers).json()['asin_list']
 print(asin_code)
+driver.get("https://www.amazon.com/")
+time.sleep(1)
+driver.find_element_by_id("nav-packard-glow-loc-icon").click()
+time.sleep(1)
+driver.find_element_by_id("GLUXZipUpdateInput").send_keys("07078")
+apply = driver.find_element_by_id("GLUXZipUpdate-announce")
+driver.execute_script("arguments[0].click();", apply)
+time.sleep(1)
+driver.find_element_by_tag_name("body").click()
+time.sleep(1)
 for i in asin_code:
     driver.get(base_url+str(i))
+    update_api_url = "https://bestviewsreviews.com/api/product/"+i+"/" + cat_slug.strip() + "/update"
+    if "See price in cart" in driver.page_source:
+            time.sleep(0.2)
+        # try:
+            driver.get("https://www.amazon.com/gp/offer-listing/"+i+"/ref=olp_twister_child?ie=UTF8&mv_style_name=0")
+
+            price = driver.find_element_by_xpath("//span[@class = 'a-size-large a-color-price olpOfferPrice a-text-bold']").text
+            data1 = {'price': str(price)
+                     }
+            res = requests.put(url=update_api_url, data=data1,
+                               headers=headers)
+            print(res)
+            print("done for " + i + "Price is " + price)
+        # except:
+        #     pass
+    elif "Available from" in driver.page_source:
+        time.sleep(0.1)
+        driver.get("https://www.amazon.com/gp/offer-listing/"+i+"/ref=dp_olp_afts?ie=UTF8&condition=all")
+        time.sleep(0.5)
+        price = driver.find_element_by_xpath("//span[@class ='a-size-large a-color-price olpOfferPrice a-text-bold']").text
+        data1 = {'price': str(price)
+                 }
+        res = requests.put(url=update_api_url, data=data1,
+                           headers=headers)
+        print(res)
+        print("done for " + i + "Price is " + price)
+
+
+
     try:
+        time.sleep(0.5)
         price = driver.find_element_by_xpath("//span[@id ='priceblock_ourprice']").text
         # print(price)
-        data1={'price':price
+        data1={'price':str(price)
         }
-        requests.put(url=update_api_url, data=data1,
+        res = requests.put(url=update_api_url, data=data1,
                      headers=headers)
-        print("done for "+i)
+        print(res)
+        print("done for " + i + "Price is " + price)
+
     except:
-        pass
+        try:
+            time.sleep(0.5)
+            price = driver.find_element_by_xpath("//span[@id ='price_inside_buybox']").text
+            # print(price)
+            data1 = {'price': str(price)
+                     }
+            res = requests.put(url=update_api_url, data=data1,
+                         headers=headers)
+            print(res)
+            print("done for " + i+"Price is "+price)
+        except:
+            pass
+

@@ -18,7 +18,7 @@ class JoinViewController: UIViewController ,WKNavigationDelegate{
     @IBOutlet var joinbackbutton: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myURL = URL(string:"https://www.nationalguard.com/get-started")
+        let myURL = URL(string:"https://nharmyguardrecruiting.com/contact-a-recruiter/")
         let myRequest = URLRequest(url: myURL!)
         myWebView.load(myRequest)
         myWebView.addSubview(self.activityind)
