@@ -8,58 +8,36 @@
 
 
 import UIKit
-import WebKit
-class FamilyViewController: UIViewController,WKNavigationDelegate {
+class FamilyViewController: UIViewController {
     
-    @IBOutlet var myWebView: WKWebView!
+ 
+    @IBOutlet weak var familyviewcorner: UIView!
+    @IBAction func additionalviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "additionalViewSague", sender: self)
+    }
     
-    @IBOutlet var loading: UILabel!
-    @IBOutlet var activityind: UIActivityIndicatorView!
-    @IBOutlet var familybackbutton: UIImageView!
+    @IBAction func stateresviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "stateresViewSague", sender: self)
+    }
+    
+    @IBAction func chaplainviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "chaplainViewSague", sender: self)
+    }
+    
+    @IBAction func stateviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "stateViewSague", sender: self)
+    }
+    @IBAction func careviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "careViewSague", sender: self)
+    }
+    @IBAction func backbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "HomeScreenSague", sender: self)
+    }
     override func viewDidLoad() {
+        self.familyviewcorner.layer.cornerRadius = 8
+
         super.viewDidLoad()
-        let myURL = URL(string:"https://nh.ng.mil/Family-Services/")
-        let myRequest = URLRequest(url: myURL!)
-        myWebView.load(myRequest)
-        myWebView.addSubview(self.activityind)
-        self.myWebView.navigationDelegate = self
-        activityind.startAnimating()
-        loading.isHidden = false
-        activityind.hidesWhenStopped = true
         
-        let tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(imageTapped4))
-
-                    // add it to the image view;
-                    familybackbutton.addGestureRecognizer(tapGesture4)
-                    // make sure imageView can be interacted with by user
-                familybackbutton.isUserInteractionEnabled = true
-               
-                }
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        loading.isHidden = true
-
-               activityind.stopAnimating()
-           }
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        loading.isHidden = true
-
-               activityind.stopAnimating()
-           }
-    
-            
-        @objc func imageTapped4(gesture: UIGestureRecognizer) {
-            // if the tapped view is a UIImageView then set it to imageview
-        if (gesture.view as? UIImageView) != nil {
-                self.performSegue(withIdentifier: "HomeScreenSague", sender: self)
-                //Here you can initiate your new ViewController
-
-                }
             }
-
-
-            // Do any additional setup after loading the view.
+    
         }
-
-
-
-

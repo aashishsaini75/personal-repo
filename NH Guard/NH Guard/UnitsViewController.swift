@@ -8,57 +8,44 @@
 
 
 import UIKit
-import WebKit
-class UnitsViewController: UIViewController,WKNavigationDelegate {
+class UnitsViewController: UIViewController {
     
-    @IBOutlet var myWebView: WKWebView!
+    @IBOutlet weak var unitviewcorner: UIView!
+    @IBAction func fieldviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "fieldViewSague", sender: self)
+    }
     
-    @IBOutlet var unitbackbutton: UIImageView!
-    @IBOutlet var loading: UILabel!
+    @IBAction func troopviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "troopViewSague", sender: self)
+    }
     
-    @IBOutlet var activityind:
-    UIActivityIndicatorView!
+    @IBAction func jointviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "jointViewSague", sender: self)
+    }
+    
+    @IBAction func recruitingviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "recruitingViewSague", sender: self)
+    }
+    
+    @IBAction func nharngviewbutton(_ sender: Any) {
+        self.performSegue(withIdentifier: "nharngViewSague", sender: self)
+    }
+    
+    @IBAction func backbutton(_ sender: Any) {
+        
+    self.performSegue(withIdentifier: "HomeScreenSague", sender: self)
+               //Here you can initiate your new ViewController
+    }
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let myURL = URL(string:"https://nh.ng.mil/Components/Army/")
-        let myRequest = URLRequest(url: myURL!)
-        myWebView.load(myRequest)
-        myWebView.addSubview(self.activityind)
-        self.myWebView.navigationDelegate = self
-        activityind.startAnimating()
-        activityind.hidesWhenStopped = true
-        
-        let tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(imageTapped4))
+        self.unitviewcorner.layer.cornerRadius = 8
 
-                    // add it to the image view;
-                    unitbackbutton.addGestureRecognizer(tapGesture4)
-                    // make sure imageView can be interacted with by user
-                unitbackbutton.isUserInteractionEnabled = true
-               
-                }
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        loading.isHidden = true
-
-        
-               activityind.stopAnimating()
-           }
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        loading.isHidden = true
-
-               activityind.stopAnimating()
-           }
-            
-        @objc func imageTapped4(gesture: UIGestureRecognizer) {
-            // if the tapped view is a UIImageView then set it to imageview
-        if (gesture.view as? UIImageView) != nil {
-                self.performSegue(withIdentifier: "HomeScreenSague", sender: self)
-                //Here you can initiate your new ViewController
-
-                }
-            }
-
-
-            // Do any additional setup after loading the view.
+          super.viewDidLoad()
+          }
+     
+          // Do any additional setup after loading the view.
+    
+              // Do any additional setup after loading the view.
         }
 
 

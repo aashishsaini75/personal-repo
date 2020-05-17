@@ -15,7 +15,16 @@
 		0F0333022435C82500A54AC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0333002435C82500A54AC1 /* LaunchScreen.storyboard */; };
 		0F03330D2435C82500A54AC1 /* NH_GuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F03330C2435C82500A54AC1 /* NH_GuardTests.swift */; };
 		0F0333182435C82500A54AC1 /* NH_GuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0333172435C82500A54AC1 /* NH_GuardUITests.swift */; };
+		0F0AA6892470EEEE00CBD8B5 /* RecruitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0AA6882470EEEE00CBD8B5 /* RecruitingViewController.swift */; };
+		0F0AA68F2470F6BC00CBD8B5 /* JointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0AA68E2470F6BC00CBD8B5 /* JointViewController.swift */; };
+		0F0AA6912470FCD300CBD8B5 /* SexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0AA6902470FCD300CBD8B5 /* SexViewController.swift */; };
+		0F0AA6932470FF7100CBD8B5 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0AA6922470FF7100CBD8B5 /* YellowViewController.swift */; };
+		0F0AA6952471023400CBD8B5 /* SubstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0AA6942471023400CBD8B5 /* SubstanceViewController.swift */; };
 		0F2D399E243776BA00D78705 /* MoreScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D399D243776BA00D78705 /* MoreScreenViewController.swift */; };
+		0F2F585B246FFE6D002D1AC9 /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2F585A246FFE6D002D1AC9 /* StateViewController.swift */; };
+		0F781C86246FAB8100F77764 /* RedHatDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FCAA8C824362D4700023BC3 /* RedHatDisplay-Bold.ttf */; };
+		0F781C87246FAB8100F77764 /* RedHatDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FCAA8C824362D4700023BC3 /* RedHatDisplay-Bold.ttf */; };
+		0F781C88246FAB8200F77764 /* RedHatDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FCAA8C824362D4700023BC3 /* RedHatDisplay-Bold.ttf */; };
 		0F8975062438F4070073E027 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8975052438F4070073E027 /* ContactViewController.swift */; };
 		0F8975082438F7C00073E027 /* UnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8975072438F7C00073E027 /* UnitsViewController.swift */; };
 		0F89750A2438FA950073E027 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8975092438FA950073E027 /* FamilyViewController.swift */; };
@@ -35,8 +44,15 @@
 		0FBFB3752440B76B00AB8363 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBFB3742440B76A00AB8363 /* UserDefaultsKeys.swift */; };
 		0FBFB37B2440C51F00AB8363 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBFB37A2440C51F00AB8363 /* Default-568h@2x.png */; };
 		0FBFB37D24419F8D00AB8363 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBFB37C24419F8D00AB8363 /* ReviewService.swift */; };
+		0FC3019F247003FB009325B0 /* CareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3019E247003FB009325B0 /* CareViewController.swift */; };
+		0FC301A1247012B9009325B0 /* ChapainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC301A0247012B9009325B0 /* ChapainViewController.swift */; };
+		0FC301A324701D82009325B0 /* StateresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC301A224701D82009325B0 /* StateresViewController.swift */; };
+		0FC301A524702663009325B0 /* AdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC301A424702662009325B0 /* AdditionalViewController.swift */; };
 		0FD36C9124361AA600BC46C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0332FB2435C82200A54AC1 /* Main.storyboard */; };
 		0FD36C9224361AA700BC46C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0332FB2435C82200A54AC1 /* Main.storyboard */; };
+		0FE2DEA524703503004E1ED4 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE2DEA424703503004E1ED4 /* FieldViewController.swift */; };
+		0FE2DEA924703F6F004E1ED4 /* TroopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE2DEA824703F6F004E1ED4 /* TroopViewController.swift */; };
+		0FE2DEAB24704382004E1ED4 /* NharngViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE2DEAA24704382004E1ED4 /* NharngViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +87,13 @@
 		0F0333132435C82500A54AC1 /* NH GuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NH GuardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0333172435C82500A54AC1 /* NH_GuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NH_GuardUITests.swift; sourceTree = "<group>"; };
 		0F0333192435C82500A54AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F0AA6882470EEEE00CBD8B5 /* RecruitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitingViewController.swift; sourceTree = "<group>"; };
+		0F0AA68E2470F6BC00CBD8B5 /* JointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JointViewController.swift; sourceTree = "<group>"; };
+		0F0AA6902470FCD300CBD8B5 /* SexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexViewController.swift; sourceTree = "<group>"; };
+		0F0AA6922470FF7100CBD8B5 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		0F0AA6942471023400CBD8B5 /* SubstanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstanceViewController.swift; sourceTree = "<group>"; };
 		0F2D399D243776BA00D78705 /* MoreScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreScreenViewController.swift; sourceTree = "<group>"; };
+		0F2F585A246FFE6D002D1AC9 /* StateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		0F8975052438F4070073E027 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		0F8975072438F7C00073E027 /* UnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsViewController.swift; sourceTree = "<group>"; };
 		0F8975092438FA950073E027 /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +114,14 @@
 		0FBFB3742440B76A00AB8363 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDefaultsKeys.swift; path = "NH Guard/UserDefaultsKeys.swift"; sourceTree = SOURCE_ROOT; };
 		0FBFB37A2440C51F00AB8363 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0FBFB37C24419F8D00AB8363 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
+		0FC3019E247003FB009325B0 /* CareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareViewController.swift; sourceTree = "<group>"; };
+		0FC301A0247012B9009325B0 /* ChapainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapainViewController.swift; sourceTree = "<group>"; };
+		0FC301A224701D82009325B0 /* StateresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateresViewController.swift; sourceTree = "<group>"; };
+		0FC301A424702662009325B0 /* AdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalViewController.swift; sourceTree = "<group>"; };
 		0FCAA8C824362D4700023BC3 /* RedHatDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		0FE2DEA424703503004E1ED4 /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
+		0FE2DEA824703F6F004E1ED4 /* TroopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroopViewController.swift; sourceTree = "<group>"; };
+		0FE2DEAA24704382004E1ED4 /* NharngViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NharngViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +187,6 @@
 				0FA105D42438CF0E000CB8D4 /* NewsViewController.swift */,
 				0F8975052438F4070073E027 /* ContactViewController.swift */,
 				0F8975072438F7C00073E027 /* UnitsViewController.swift */,
-				0F8975092438FA950073E027 /* FamilyViewController.swift */,
 				0F89750B243994460073E027 /* JoinViewController.swift */,
 				0F89750D24399DBB0073E027 /* VeterenViewController.swift */,
 				0F89750F2439B2300073E027 /* MissionViewController.swift */,
@@ -172,7 +200,21 @@
 				0F0332FE2435C82500A54AC1 /* Assets.xcassets */,
 				0F0333002435C82500A54AC1 /* LaunchScreen.storyboard */,
 				0F0333032435C82500A54AC1 /* Info.plist */,
+				0F2F585A246FFE6D002D1AC9 /* StateViewController.swift */,
 				0FBFB37C24419F8D00AB8363 /* ReviewService.swift */,
+				0F8975092438FA950073E027 /* FamilyViewController.swift */,
+				0FC3019E247003FB009325B0 /* CareViewController.swift */,
+				0FC301A0247012B9009325B0 /* ChapainViewController.swift */,
+				0FC301A224701D82009325B0 /* StateresViewController.swift */,
+				0FC301A424702662009325B0 /* AdditionalViewController.swift */,
+				0FE2DEA424703503004E1ED4 /* FieldViewController.swift */,
+				0FE2DEA824703F6F004E1ED4 /* TroopViewController.swift */,
+				0FE2DEAA24704382004E1ED4 /* NharngViewController.swift */,
+				0F0AA6882470EEEE00CBD8B5 /* RecruitingViewController.swift */,
+				0F0AA68E2470F6BC00CBD8B5 /* JointViewController.swift */,
+				0F0AA6902470FCD300CBD8B5 /* SexViewController.swift */,
+				0F0AA6922470FF7100CBD8B5 /* YellowViewController.swift */,
+				0F0AA6942471023400CBD8B5 /* SubstanceViewController.swift */,
 			);
 			path = "NH Guard";
 			sourceTree = "<group>";
@@ -319,6 +361,7 @@
 				0F0332FF2435C82500A54AC1 /* Assets.xcassets in Resources */,
 				0FBFB37B2440C51F00AB8363 /* Default-568h@2x.png in Resources */,
 				0F0332FD2435C82200A54AC1 /* Main.storyboard in Resources */,
+				0F781C86246FAB8100F77764 /* RedHatDisplay-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F781C87246FAB8100F77764 /* RedHatDisplay-Bold.ttf in Resources */,
 				0FD36C9124361AA600BC46C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F781C88246FAB8200F77764 /* RedHatDisplay-Bold.ttf in Resources */,
 				0FD36C9224361AA700BC46C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,8 +391,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F0332FA2435C82200A54AC1 /* ViewController.swift in Sources */,
+				0F0AA6912470FCD300CBD8B5 /* SexViewController.swift in Sources */,
 				0FBFB37D24419F8D00AB8363 /* ReviewService.swift in Sources */,
+				0F0AA68F2470F6BC00CBD8B5 /* JointViewController.swift in Sources */,
+				0FE2DEA524703503004E1ED4 /* FieldViewController.swift in Sources */,
 				0F8975062438F4070073E027 /* ContactViewController.swift in Sources */,
+				0FC3019F247003FB009325B0 /* CareViewController.swift in Sources */,
 				0F89750E24399DBB0073E027 /* VeterenViewController.swift in Sources */,
 				0F89750C243994460073E027 /* JoinViewController.swift in Sources */,
 				0F0332F62435C82200A54AC1 /* AppDelegate.swift in Sources */,
@@ -355,16 +404,25 @@
 				0F8FFCDD2438747A00469384 /* LeadershipViewController.swift in Sources */,
 				0F8975182439CAC40073E027 /* CemetryViewController.swift in Sources */,
 				0F89750A2438FA950073E027 /* FamilyViewController.swift in Sources */,
+				0FC301A524702663009325B0 /* AdditionalViewController.swift in Sources */,
+				0F2F585B246FFE6D002D1AC9 /* StateViewController.swift in Sources */,
 				0F8975142439C18E0073E027 /* CommunityViewController.swift in Sources */,
+				0F0AA6952471023400CBD8B5 /* SubstanceViewController.swift in Sources */,
+				0FE2DEA924703F6F004E1ED4 /* TroopViewController.swift in Sources */,
 				0FA105D32438C9D1000CB8D4 /* SoldierServicesViewController.swift in Sources */,
 				0FA105D52438CF0E000CB8D4 /* NewsViewController.swift in Sources */,
+				0F0AA6892470EEEE00CBD8B5 /* RecruitingViewController.swift in Sources */,
 				0FBFB3752440B76B00AB8363 /* UserDefaultsKeys.swift in Sources */,
+				0F0AA6932470FF7100CBD8B5 /* YellowViewController.swift in Sources */,
 				0F89751C2439D79E0073E027 /* TwitterViewController.swift in Sources */,
+				0FC301A1247012B9009325B0 /* ChapainViewController.swift in Sources */,
 				0F0332F82435C82200A54AC1 /* SceneDelegate.swift in Sources */,
+				0FE2DEAB24704382004E1ED4 /* NharngViewController.swift in Sources */,
 				0F8975162439C72D0073E027 /* DepartmentViewController.swift in Sources */,
 				0F89751A2439D5830073E027 /* FacebookViewController.swift in Sources */,
 				0F8975102439B2300073E027 /* MissionViewController.swift in Sources */,
 				0F2D399E243776BA00D78705 /* MoreScreenViewController.swift in Sources */,
+				0FC301A324701D82009325B0 /* StateresViewController.swift in Sources */,
 				0F8975082438F7C00073E027 /* UnitsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkcircletechllcapps.nh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -573,7 +631,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkcircletechllcapps.nh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

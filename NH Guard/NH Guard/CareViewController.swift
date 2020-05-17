@@ -1,61 +1,53 @@
 //
-//  unitsViewController.swift
+//  CareViewController.swift
 //  NH Guard
 //
-//  Created by Aashish Saini on 4/4/20.
+//  Created by Aashish Saini on 5/16/20.
 //  Copyright © 2020 Aashish Saini. All rights reserved.
 //
 
 
+
 import UIKit
 import WebKit
-class JoinViewController: UIViewController ,WKNavigationDelegate{
-    
-    @IBOutlet weak var joinbackbutton: UIImageView!
+class CareViewController: UIViewController,WKNavigationDelegate {
+    @IBOutlet weak var leaderbackbutton: UIImageView!
     @IBOutlet weak var myWebView: WKWebView!
-    
-    @IBOutlet weak var activityind: UIActivityIndicatorView!
     @IBOutlet weak var loading: UILabel!
-    
+    @IBOutlet weak var activityind: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myURL = URL(string:"https://nharmyguardrecruiting.com/contact-a-recruiter/")
+        let myURL = URL(string:"https://nh.ng.mil/Family-Services/Care-Coordination-Program/")
         let myRequest = URLRequest(url: myURL!)
         myWebView.load(myRequest)
         myWebView.addSubview(self.activityind)
         self.myWebView.navigationDelegate = self
         activityind.startAnimating()
-        loading.isHidden = false
         activityind.hidesWhenStopped = true
-
 
         
         let tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(imageTapped4))
 
                     // add it to the image view;
-                    joinbackbutton.addGestureRecognizer(tapGesture4)
+                    leaderbackbutton.addGestureRecognizer(tapGesture4)
                     // make sure imageView can be interacted with by user
-                joinbackbutton.isUserInteractionEnabled = true
+                leaderbackbutton.isUserInteractionEnabled = true
                
                 }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-                  loading.isHidden = true
-
+        loading.isHidden = true
                   activityind.stopAnimating()
-        
-        
-        
               }
-       func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-                  activityind.stopAnimating()
-                  loading.isHidden = true
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        loading.isHidden = true
 
+                  activityind.stopAnimating()
               }
             
         @objc func imageTapped4(gesture: UIGestureRecognizer) {
             // if the tapped view is a UIImageView then set it to imageview
         if (gesture.view as? UIImageView) != nil {
-                self.performSegue(withIdentifier: "HomeScreenSague", sender: self)
+                self.performSegue(withIdentifier: "familyViewSague", sender: self)
                 //Here you can initiate your new ViewController
 
                 }
